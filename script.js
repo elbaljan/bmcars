@@ -53,6 +53,33 @@ function mostrarMenu() {
     }
   })
 
+  var opcionesIdioma2 = document.getElementById("opcionesIdioma2")
+  var aIdioma2 = document.getElementById("aIdioma2")
+  var idiomaNuevo2 = document.getElementById("idiomaNuevo2")
+  var idiomas2 = document.getElementById("idiomas2")
+
+  opcionesIdioma2.addEventListener("mouseenter", ()=>{
+    if(aIdioma2.style.color === "black" || aIdioma2.style.color === ""){
+         opcionesIdioma2.style.backgroundColor = "black"
+         opcionesIdioma2.style.transition = "background-color 0.2s ease"
+         aIdioma2.style.color = "white" 
+         idiomaNuevo2.style.opacity = "1"
+         idiomaNuevo2.style.transform = "translateY(44px)" 
+         idiomaNuevo2.style.transition ="transform 0.3s ease, opacity 0.2s ease"
+    }
+  })
+
+  idiomas2.addEventListener("mouseleave", ()=>{
+    if(idiomaNuevo2.style.transform === "translateY(44px)" || idiomaNuevo2.style.transform === ""){
+         opcionesIdioma2.style.backgroundColor = "var(--grey)"
+         opcionesIdioma2.style.transition = "background-color 0.2s ease"
+         aIdioma2.style.color = "black" 
+         idiomaNuevo2.style.opacity = "0"
+         idiomaNuevo2.style.transform = "translateY(0px)" 
+         idiomaNuevo2.style.transition ="transform 1s ease, opacity 1.5s ease"
+    }
+  })
+
 
   const galeria = document.getElementById("galeria");        
 
@@ -103,3 +130,5 @@ galeria.addEventListener('touchmove', (e) => {
 galeria.addEventListener('touchend', () => {
   isDragging = false;
 });
+
+
