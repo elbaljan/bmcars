@@ -79,20 +79,20 @@ let isDragging = false;
 let startX;
 let scrollLeft;
 
-galeria.addEventListener("touchstart", (e) => {
+contenedor.addEventListener("touchstart", (e) => {
   isDragging = true;
   startX = e.touches[0].pageX;
-  scrollLeft = galeria.scrollLeft;
+  scrollLeft = contenedor.scrollLeft;
 }, { passive: true });
 
-galeria.addEventListener("touchmove", (e) => {
+contenedor.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
   e.preventDefault(); // solo si usas passive: false
   const x = e.touches[0].pageX;
   const walk = startX - x;
-  galeria.scrollLeft = scrollLeft + walk;
+  contenedor.scrollLeft = scrollLeft + walk;
 }, { passive: false });
 
-galeria.addEventListener("touchend", () => {
+contenedor.addEventListener("touchend", () => {
   isDragging = false;
 });

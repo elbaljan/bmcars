@@ -695,17 +695,23 @@ input[type="checkbox"]{
 }
 
 .galeria-contenedor {
+    padding-left: 400px;
     width: 100%;
     overflow-x: scroll;
-    white-space: nowrap; /* o usar display: flex con elementos inline o de ancho fijo */
-    -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
+    white-space: nowrap; 
+    -webkit-overflow-scrolling: touch;
     cursor: grab;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+
+  .galeria-contenedor::-webkit-scrollbar {
+    display: none;          
   }
 
   .galeria {
     display: flex;
-    width: max-content; /* mejor que width fija */
-    margin-left: 400px; /* considera usar padding si quieres margen interno */
+    width: max-content; 
   }
   
 
@@ -975,8 +981,8 @@ footer p{
         
     }
 
-    .galeria{
-        margin-left: 178px;
+    .galeria-contenedor{
+        padding-left: 178px;
     }
 
     .div-arrow{
@@ -1032,8 +1038,12 @@ footer p{
         
     }
 
-    .galeria, .div-arrow{
+    .div-arrow{
         margin-left: 100px;
+    }
+
+    .galeria-contenedor{
+        padding-left: 100px;
     }
     .sec5{
         background-size:cover;
@@ -1088,8 +1098,12 @@ footer p{
         
     }
 
-    .galeria, .div-arrow{
+   .div-arrow{
         margin-left: 60px;
+    }
+
+    .galeria-contenedor{
+        padding-left: 60px;
     }
 
     .title{
@@ -1204,8 +1218,8 @@ footer p{
         
     }
 
-    .galeria{
-        margin-left: 30px;
+    .galeria-contenedor{
+        padding-left: 30px;
     }
 
     .div-img{
@@ -1315,8 +1329,12 @@ footer p{
         
     }
 
-    .galeria, .div-arrow{
+    .div-arrow{
         margin-left: 60px;
+    }
+
+    .galeria-contenedor{
+        padding-left: 60px;
     }
 
     header div, .main-div2{
@@ -1486,8 +1504,8 @@ footer p{
         margin-bottom: 0px;
     }
 
-    .galeria{
-        margin-left: 20px;
+    .galeria-contenedor{
+        padding-left: 20px;
     }
     
     .div-img{
