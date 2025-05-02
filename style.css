@@ -817,6 +817,10 @@ input[type="checkbox"]{
     background-image: url('img/pontevedra.jpeg');
 }
 
+.img-7{
+    background-image: url('img/salinas.jpg');
+}
+
 .div-arrow{
     display: flex;
     margin-left: 420px;
@@ -909,11 +913,6 @@ footer p{
     display: none;
 }
 
-@media (hover: none) and (pointer: coarse) {
-    .div-img::after {
-      display: none;
-    }
-  }
 
 
 @media screen and (max-width: 2500px) {
@@ -1296,6 +1295,10 @@ footer p{
 }
 
 @media screen and (max-width: 415px){
+
+    .div-img::after {
+        display: none;
+      }
 
     .mapa-pc{
         display: none;
