@@ -1311,6 +1311,9 @@ footer p{
         z-index: 4;
       }
 
+   .galeria {
+        margin-left: 0;
+      }
 
     .galeria-title{
         font-size: 30px;
