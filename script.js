@@ -53,9 +53,6 @@ reservar?.addEventListener("click", () => {
   })
 
 
-//configurarIdioma("");  // Para los elementos sin sufijo
-//configurarIdioma("2"); // Para los elementos con sufijo 2 
-
 
 const contenedor = document.getElementById("contenedor"); 
 const arrowLeft = document.getElementById("arrowLeft");

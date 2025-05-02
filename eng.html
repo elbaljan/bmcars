@@ -253,7 +253,7 @@ git push origin main  # O la rama que estés usando
             </div>
             <img src="img/sobre.PNG" alt="sobre">
         </div>
-        <form name="reserva" method="POST" data-netlify="true">
+        <form name="reserva" method="POST" action="reserva-eng.php">
             <input type="hidden" name="form-name" value="reserva">
             <div class="form-row">
                 <div class="form-unit">
@@ -266,11 +266,11 @@ git push origin main  # O la rama que estés usando
                         <select name="coche" id="">
                             <option value="">Choose a car</option>
                             <optgroup label="Gama baja">
-                                <option value="">5-seater car</option>
+                                <option value="Coche 5 plazas - Gama baja">5-seater car</option>
                             </optgroup>
                             <optgroup label="Gama alta">
-                                <option value="">5-seater car</option>
-                                <option value="">7-seater car</option>
+                                <option value="Coche 5 plazas - Gama alta">5-seater car</option>
+                                <option value="Coche 7 plazas - Gama alta">7-seater car</option>
                             </optgroup>
                         </select>
                     </div>
@@ -299,9 +299,9 @@ git push origin main  # O la rama que estés usando
                     <label for="horas">Driving hours</label>
                     <div class="falso-input">
                         <select name="horas" id="">
-                            <option value="">6h</option>
-                            <option value="">6 to 12h</option>
-                            <option value="">12 to 24h</option>
+                            <option value="6h">6h</option>
+                            <option value="6h a 12h">6 to 12h</option>
+                            <option value="12h a 24h">12 to 24h</option>
                         </select>
                     </div>
                     
@@ -317,7 +317,7 @@ git push origin main  # O la rama que estés usando
                         <p>Arcade</p>
                     </div>
                     <div class="label-radio">
-                        <input type="radio" name="arcade" id="" value="Arcade">
+                        <input type="radio" name="arcade" id="" value="Pontesampaio">
                         <p>Pontesampaio</p>
                     </div>
                 </div> 
