@@ -1296,16 +1296,19 @@ footer p{
 
 @media screen and (max-width: 415px){
 
-    .div-img::after {
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
+    .div-img {
+        position: relative;
         border-radius: 15px;
-        margin: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
+        overflow: hidden; /* 🔑 Esto es lo que hace que el pseudoelemento no se salga */
+      }
+      
+      .div-img::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        z-index: 4;
       }
 
 
