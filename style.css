@@ -695,14 +695,16 @@ input[type="checkbox"]{
 }
 
 .galeria-contenedor {
-    padding-left: 400px;
+    padding-left: 0; /* o ajústalo a lo que necesites */
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     overflow-x: scroll;
     white-space: nowrap; 
     -webkit-overflow-scrolling: touch;
     cursor: grab;
     -ms-overflow-style: none;  
-    scrollbar-width: none; 
+    scrollbar-width: none;  
   }
 
   .galeria-contenedor::-webkit-scrollbar {
@@ -1300,11 +1302,9 @@ footer p{
         position: relative;
         border-radius: 15px;
         overflow: hidden;
-        margin: 0px;
-        padding: 0px;
       }
       
-    .div-img::after {
+      .div-img::after {
         content: '';
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -1313,17 +1313,8 @@ footer p{
         z-index: 4;
       }
 
-
-      .div-img-2{
-        height: 100%;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-      }
-
    .galeria {
-        margin: 0px;
-        padding: 0px;
+        margin-left: 0;
       }
 
     .galeria-title{
