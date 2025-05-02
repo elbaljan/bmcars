@@ -714,6 +714,9 @@ input[type="checkbox"]{
     display: flex;
     width: max-content; 
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   
 
@@ -729,6 +732,9 @@ input[type="checkbox"]{
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-shrink: 0;
+    max-width: 100vw;
+    transition: margin 0.3s ease;
 }
 
 .div-img::after{
@@ -800,6 +806,7 @@ input[type="checkbox"]{
 
 .img-2{
     background-image: url('img/castelo.jpg');
+    background-position-y: 10%;
 }
 
 
@@ -1298,12 +1305,18 @@ footer p{
 
 @media screen and (max-width: 415px){
 
-    .div-img {
+      .div-img{
+        height: 250px;
+        width: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin: 0px;
         position: relative;
         border-radius: 15px;
         overflow: hidden;
-        margin-right: 20px; /* 🔑 Esto es lo que hace que el pseudoelemento no se salga */
-      }
+        margin: 0 20px;
+    }
       
       .div-img::after {
         content: '';
@@ -1539,14 +1552,6 @@ footer p{
         padding-left: 20px;
     }
     
-    .div-img{
-        height: 250px;
-        width: 350px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 15px;
-        margin: 0px;
-    }
     
     .div-arrow{
         justify-content: space-between;
