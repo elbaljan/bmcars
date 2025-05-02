@@ -1299,10 +1299,12 @@ footer p{
     .div-img {
         position: relative;
         border-radius: 15px;
-        overflow: hidden; /* 🔑 Esto es lo que hace que el pseudoelemento no se salga */
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
       }
       
-      .div-img::after {
+    .div-img::after {
         content: '';
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -1311,8 +1313,17 @@ footer p{
         z-index: 4;
       }
 
+
+      .div-img-2{
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
    .galeria {
-        margin-left: 0;
+        margin: 0px;
+        padding: 0px;
       }
 
     .galeria-title{
@@ -1543,7 +1554,6 @@ footer p{
         background-repeat: no-repeat;
         border-radius: 15px;
         margin: 0px;
-        margin-right: 20px;
     }
     
     .div-arrow{
