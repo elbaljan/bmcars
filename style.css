@@ -697,18 +697,17 @@ input[type="checkbox"]{
 .galeria-contenedor {
     width: 100%;
     overflow-x: scroll;
-  white-space: nowrap; /* o usar display: flex con elementos inline o de ancho fijo */
-  -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
+    white-space: nowrap; /* o usar display: flex con elementos inline o de ancho fijo */
+    -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
     cursor: grab;
   }
 
-.galeria{
+  .galeria {
     display: flex;
-    width: 5000px;
-    margin-left: 400px;
-    transition: transform 0.3s ease;
-    transform: translateX(0px);
-}
+    width: max-content; /* mejor que width fija */
+    margin-left: 400px; /* considera usar padding si quieres margen interno */
+  }
+  
 
 .div-img{
     height: 500px;

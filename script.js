@@ -58,33 +58,21 @@ configurarIdioma("");  // Para los elementos sin sufijo
 configurarIdioma("2"); // Para los elementos con sufijo 2 */
 
 
-  const galeria = document.getElementById("galeria");        
-  var arrowLeft = document.getElementById("arrowLeft")
-  var arrowRight = document.getElementById("arrowRight")
+const contenedor = document.getElementById("contenedor"); // ← este es el que hace scroll
+const arrowLeft = document.getElementById("arrowLeft");
+const arrowRight = document.getElementById("arrowRight");
 
-  arrowRight.addEventListener("click", ()=>{
-    if (galeria.style.transform === "translateX(0px)" || galeria.style.transform === "" ) {
-      galeria.style.transform = "translateX(-1000px)"
-    }
+const scrollAmount = 820; // ajusta según el ancho de tus .div-img
 
-    else {
-      galeria.style.transform = "translateX(-2000px)"
-    }
-  })
+arrowRight.addEventListener("click", () => {
+  contenedor.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
 
-  arrowLeft.addEventListener("click", ()=>{
-    if (galeria.style.transform === "translateX(-1000px)") {
-      galeria.style.transform = "translateX(0px)"
-    }
+arrowLeft.addEventListener("click", () => {
+  contenedor.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
 
-    else if (galeria.style.transform === "translateX(-2000px)") {
-      galeria.style.transform = "translateX(-1000px)"
-    }
 
-    else {
-      galeria.style.transform = "translateX(0px)"
-    }
-  })
 
 
 let isDragging = false;
