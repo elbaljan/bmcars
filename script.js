@@ -23,7 +23,8 @@ reservar?.addEventListener("click", () => {
   });
 });
 
-// Función genérica para mostrar idioma
+
+/*
 function configurarIdioma(idiomaId) {
   const opcionesIdioma = document.getElementById(`opcionesIdioma${idiomaId}`);
   const aIdioma = document.getElementById(`aIdioma${idiomaId}`);
@@ -54,30 +55,38 @@ function configurarIdioma(idiomaId) {
 }
 
 configurarIdioma("");  // Para los elementos sin sufijo
-configurarIdioma("2"); // Para los elementos con sufijo 2
+configurarIdioma("2"); // Para los elementos con sufijo 2 */
 
-// Galería
-const galeria = document.getElementById("galeria");
-const arrowLeft = document.getElementById("arrowLeft");
-const arrowRight = document.getElementById("arrowRight");
 
-arrowRight?.addEventListener("click", () => {
-  const transform = galeria.style.transform;
-  galeria.style.transform =
-    transform === "translateX(0px)" || transform === ""
-      ? "translateX(-1000px)"
-      : "translateX(-2000px)";
-});
+  const galeria = document.getElementById("galeria");        
+  var arrowLeft = document.getElementById("arrowLeft")
+  var arrowRight = document.getElementById("arrowRight")
 
-arrowLeft?.addEventListener("click", () => {
-  const transform = galeria.style.transform;
-  galeria.style.transform =
-    transform === "translateX(-2000px)"
-      ? "translateX(-1000px)"
-      : "translateX(0px)";
-});
+  arrowRight.addEventListener("click", ()=>{
+    if (galeria.style.transform === "translateX(0px)" || galeria.style.transform === "" ) {
+      galeria.style.transform = "translateX(-1000px)"
+    }
 
-// Drag en móvil
+    else {
+      galeria.style.transform = "translateX(-2000px)"
+    }
+  })
+
+  arrowLeft.addEventListener("click", ()=>{
+    if (galeria.style.transform === "translateX(-1000px)") {
+      galeria.style.transform = "translateX(0px)"
+    }
+
+    else if (galeria.style.transform === "translateX(-2000px)") {
+      galeria.style.transform = "translateX(-1000px)"
+    }
+
+    else {
+      galeria.style.transform = "translateX(0px)"
+    }
+  })
+
+
 let isDragging = false;
 let startX;
 let scrollLeft;
@@ -90,10 +99,11 @@ galeria.addEventListener("touchstart", (e) => {
 
 galeria.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
+  e.preventDefault(); // solo si usas passive: false
   const x = e.touches[0].pageX;
   const walk = startX - x;
   galeria.scrollLeft = scrollLeft + walk;
-}, { passive: true });
+}, { passive: false });
 
 galeria.addEventListener("touchend", () => {
   isDragging = false;

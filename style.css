@@ -696,7 +696,9 @@ input[type="checkbox"]{
 
 .galeria-contenedor {
     width: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
+  white-space: nowrap; /* o usar display: flex con elementos inline o de ancho fijo */
+  -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
     cursor: grab;
   }
 
