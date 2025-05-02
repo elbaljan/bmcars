@@ -1301,9 +1301,14 @@ footer p{
       }
 
     .div-img-2{
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
-    
+
+    .galeria-title{
+        font-size: 30px;
+    }
+
     .mapa-pc{
         display: none;
     }
