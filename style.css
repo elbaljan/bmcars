@@ -909,6 +909,12 @@ footer p{
     display: none;
 }
 
+@media (hover: none) and (pointer: coarse) {
+    .div-img::after {
+      display: none;
+    }
+  }
+
 
 @media screen and (max-width: 2500px) {
 
